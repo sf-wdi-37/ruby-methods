@@ -24,16 +24,15 @@ In order to write Ruby code, you're going to need some practice writing Ruby met
 ## Quick review
 <details>
   <summary>What are the primitive data types in JavaScript? Contrast them with the primitive types in Ruby.</summary>
-  <p>
-  <h4>Javascript</h4>
-  <ul>
-    <li> `null`, `undefined`</li>
-    <li> Strings</li>
-    <li> Booleans</li>
-    <li> Number :  `.toString()`</li>
-    <li> Arrays : `[index]` to access elements, `indexOf()`,`splice()`, `slice()`, `length` </li>
-    <li> Objects: `["some_key"]`, `.some_key` </li>
-  </ul>
+    <h4>Javascript</h4>
+    <ul>
+      <li> `null`, `undefined`</li>
+      <li> Strings</li>
+      <li> Booleans</li>
+      <li> Number :  `.toString()`</li>
+      <li> Arrays : `[index]` to access elements, `indexOf()`,`splice()`, `slice()`, `length` </li>
+      <li> Objects: `["some_key"]`, `.some_key` </li>
+    </ul>
 
    <h4>Ruby</h4>
    <ul>
@@ -52,7 +51,6 @@ In order to write Ruby code, you're going to need some practice writing Ruby met
         <li> `key`,`.keys`, `.each`</li>
       </ul>
     </ul>
-    </p>
 
 </details>
 
@@ -88,8 +86,8 @@ Create a demo of two conditionals and one loop/iterator:
 
 #### Blocks
 
-    * block - chunks of code between braces or between do..end:
-      * used with `.each`, `.map`
+   * block - chunks of code between braces or between do..end:
+     * used with `.each`, `.map`
 
     ```ruby
     [1, 2, 3].each do |n|
