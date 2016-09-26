@@ -151,6 +151,34 @@ If you want to chain another method off the result of your method call, you *do*
 results = method_name(parameter1).reverse
 ```
 
+
+#### Parameters can have default values
+
+```ruby
+def say(something = "Hello")
+  puts something
+end
+
+say # prints "Hello"
+say "Goodbye" # prints "Goodbye"
+```
+#### Recursion: methods can call themselves
+
+```ruby
+def recurse(depth)
+  if depth > 0
+    puts "Spiraling down..."
+    recurse(depth - 1)
+    puts "Spiraling up..."
+  else
+    puts "Bottom of the rabbit hole"
+  end
+end
+
+recurse(5)
+recurse 5
+```
+
 #### Define a method that operates on two parameters
 ```ruby
 def add_numbers(first, second)
@@ -187,34 +215,6 @@ def implicitly_return_5
 end
 
 implicitly_return_5
-```
-
-
-#### Parameters can have default values
-
-```ruby
-def say(something = "Hello")
-  puts something
-end
-
-say # prints "Hello"
-say "Goodbye" # prints "Goodbye"
-```
-#### Recursion: methods can call themselves
-
-```ruby
-def recurse(depth)
-  if depth > 0
-    puts "Spiraling down..."
-    recurse(depth - 1)
-    puts "Spiraling up..."
-  else
-    puts "Bottom of the rabbit hole"
-  end
-end
-
-recurse(5)
-recurse 5
 ```
 
 ## Method scope: the biggest difference from javascript
