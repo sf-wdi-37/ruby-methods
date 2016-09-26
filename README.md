@@ -37,7 +37,7 @@ In order to write Ruby code, you're going to need some practice writing Ruby met
    <h4>Ruby</h4>
    <ul>
     <li> `nil` </li>
-    <li> Integers: Fixnum, Bignum, to_s` </li>
+    <li> Integers: Fixnum, Bignum, `to_s` </li>
     <li> Floats
     <li> Strings: `.to_i` and `.to_f` `*INTEGER`</li>
     <li> Symbols </li>
