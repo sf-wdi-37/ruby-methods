@@ -2,15 +2,17 @@
 
 Put your solutions in a file called `ruby_methods.rb`. To run, type `ruby ruby_methods.rb` in the command line.
 
-Exhausted your resources (google, classmates, etc) and still super stuck on a problem? Check out the [solutions](solutions.rb).
+When you've built a working solution, add it to the [Google Doc](https://docs.google.com/document/d/1KwmIuoZMirBW9Ko3n086SflN8IXcBkSKUphk5I3D9Dg/edit?usp=sharing)!
+
+Later in class, I'll share solutions with you.
 
 ### Looping
 
-Use a loop to do  the following:
+Use a loop to do the following:
 
 1.) Write a method called `p_times` that takes a `statement` and a `num` puts the `statement` some `num` of times to the console.
 
-2.) Write a method called `letter_count` to count letter occurence in a string, returned as a `Hash`.
+2.) Write a method called `letter_count` to count letter occurrence in a string, returned as a `Hash`. For example, `letter_count 'apple'` would return `{"a"=>1, "p"=>2, "l"=>1, "e"=>1}`
 
 3.) Write a method called `mock_me` that `gets` some input from the terminal and puts it until the users type `quit` or `q` in the terminal. (Be sure to remove trailing `\n`.)
 

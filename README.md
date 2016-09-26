@@ -1,126 +1,95 @@
+<!--
+Creator: Team, editing by Cory
+Market: SF
+-->
+
+![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
+
 # Ruby Control Flow and Methods
 
+### Why is this important?
+<!-- framing the "why" in big-picture/real world examples -->
+*This workshop is important because:*
 
-| Objectives: |
-|:--- |
-| Write conditionals, loops, and methods in Ruby |
-| Apply methods in ruby to solve problems |
-| Explain the two main differences between Ruby methods and JavaScript functions: isolated scope and implicit return. |
+In order to write Ruby code, you're going to need some practice writing Ruby methods. Once you can divide your Ruby code into methods, you'll have greater mastery over your project.
 
-### History
-Ruby was designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan. Ruby on Rails, or simply Rails, is a web application framework written in Ruby.
+### What are the objectives?
+<!-- specific/measurable goal for students to achieve -->
+*After this workshop, developers will be able to:*
 
-### Parts of A Language
+- Write conditionals, loops, and methods in Ruby
+- Apply methods in ruby to solve problems
+- Explain the two main differences between Ruby methods and JavaScript functions: isolated scope and implicit return.
 
-* `Primitives`
-* `Combinations`
-* `Abstractions`
+## Quick review
+<details>
+  <summary>What are the primitive data types in JavaScript? Contrast them with the primitive types in Ruby.</summary>
+  <p>
+  <h4>Javascript</h4>
+  <ul>
+    <li> `null`, `undefined`</li>
+    <li> Strings</li>
+    <li> Booleans</li>
+    <li> Number :  `.toString()`</li>
+    <li> Arrays : `[index]` to access elements, `indexOf()`,`splice()`, `slice()`, `length` </li>
+    <li> Objects: `["some_key"]`, `.some_key` </li>
+  </ul>
 
+   <h4>Ruby</h4>
+   <ul>
+    <li> `nil` </li>
+    <li> Integers: Fixnum, Bignum, to_s` </li>
+    <li> Floats
+    <li> Strings: `.to_i` and `.to_f` `*INTEGER`</li>
+    <li> Symbols </li>
+    <li> Booleans </li>
+    <li> Arrays / Ranges : `[x..y]`, `[x...y]`, `index` </li>
+    <li> Hashes </li>
+      <ul>
+        <li> `{ :key => value }`</li>
+        <li> `{ key: value }` which is the same as `{:key =>value }`</li>
+        <li> `[some_key]` and `[some_key]=`</li>
+        <li> `key`,`.keys`, `.each`</li>
+      </ul>
+    </ul>
+    </p>
 
-### Ruby vs. JS Primitives
+</details>
 
-Let's recall some of our JS Data Types
-
-
-#### Javascript
-
-* `null`, `undefined`
-* Strings
-  *
-* Booleans
-* Number
-  * `.toString()`
-* Arrays
-  * `[index]` to access elements, `indexOf()`,`splice()`, `slice()`, `length`
-* Objects
-  * `["some_key"]`, `.some_key`
-* operators
-  * `==`, `===`, `>`, `>=`, ..
-  * `!`, `||`, `&&`
-  * `+`, `-`, `/`, `*`
-* Console methods
-    * `console.log`
-    * `prompt`
-
-#### Ruby
-
-* `nil`
-* Integers
-    * Fixnum
-    * Bignum
-     * `to_s`
-* Floats
-* Strings
-  * `.to_i` and `.to_f` `*INTEGER`
-* Symbols
-* Booleans
-* Arrays / Ranges
-  * `[x..y]`, `[x...y]`, `index`
-* Hashes
-  * `{ :key => value }`
-  * `{ key: value }` which is the same as `{:key =>value }`
-  * `[some_key]` and `[some_key]=`
-  * `key`,`.keys`, `.each`
-* operators
-  * `||=`, `*=`, `/=`
-  * `==`, `.equal?`,
-  * `!`, `not`, `||`, `&&`
-  * `**`, `+`, `-`, `/`, `*`
-* General Delimited Input
-    * `%w`, `%r`
-* Console Methods
-    * `puts`, `p`
-    * `gets` and `gets.chomp`
+<details>
+  <summary>Identify the operators in Javascript and Ruby and find the contrasts.</summary>
+  <h4>JavaScript operators</h4>
+  <ul>
+    <li>`=`, `+=`, `*=`, ...</li>
+    <li>`==`, `===`, `>`, `>=`, ... </li>
+    <li> `!`, `||`, `&&` </li>
+    <li> `+`, `-`, `/`, `*` </li>
+  </ul>
+  <h4>Ruby operators</h4>
+  <ul>
+    <li> `=`, `+=`, `*=`, ...</li>
+    <li> `==`, `.equal?`, `>`, `>=`, ... </li>
+    <li>`!`, `not`, `||`, `&&`</li>
+    <li>`** `, `+`, `-`, `/`, `*`</li>
+  </ul>
+</details>
 
 ### Control flow
 
+#### ([Ruby Control Flow Structures](http://en.wikibooks.org/wiki/Ruby_Programming/Syntax/Control_Structures))
 
-#### Javascript ([Some Control Flow Structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Statements))
-
-* Conditionals
-    * `if`, `else if`, `else`, `switch`, ...
-* Loops
-    * `do-while`, `while`,  ...
-* iterators,
-    * `for-in`
-* Exceptions
-    * `try`, `catch`
-
-#### Ruby ([Some Control Flow Structures](http://en.wikibooks.org/wiki/Ruby_Programming/Syntax/Control_Structures))
+Create a demo of two conditionals and one loop/iterator:
 
 * Conditionals
     * `if`, `elsif`, `else`, `unless`, `case when else` ...
-* Loops
+* Loops/iterators
     * `until`, `while`, `times` ...
-* iterators,
     * `.each`, `for ... in`
-* Exceptions
-    *  `begin`, `rescue`, `ensure`
 
+#### Blocks
 
-### Some Abstractions
-
-#### Javascript
-
-* Function
-    * Anonymous: `function (param1, [..param2, [...]]){...}`,
-    * Named: `function Name(param1, [..param2, [...]]){...}`
-    * Uses lexical scope
-    * Used as values
-    * require explicit return
-    * all `params` are optional
-
-#### Ruby   
-
- * Function
-    * uses `def`
-    * Do not capture scope
-    * Not used as values
-    * optional parameters must be specified
-    * implicitly returns last evaluation
-
-* block
-    * used with `.each`, `.map`, et cetera
+    * block - chunks of code between braces or between do..end:
+      * used with `.each`, `.map`
 
     ```ruby
     [1, 2, 3].each do |n|
@@ -132,13 +101,18 @@ Let's recall some of our JS Data Types
     ```ruby
     [1, 2, 3].each {|n| puts "Number #{n}"}
     ```
-    * captures scope
 
 [Further Reading on Blocks](http://mixandgo.com/blog/mastering-ruby-blocks-in-less-than-5-minutes)
 
-#Ruby Methods
+## Ruby Methods
 
-#### Define a method
+### The basics
+
+  * use `def` when defining a method.
+  * Methods implicitly returns last evaluation.
+  * Ruby is locally scoped.
+
+#### Defining a method
 
 ```ruby
 # announce you are creating a method with 'def'
@@ -152,7 +126,7 @@ end
 say_hello
 ```
 
-#### Define a method with a parameter
+#### Defining a method with a parameter
 
 ```ruby
 def say(something)
@@ -189,7 +163,14 @@ add_numbers(1,2)
 add_numbers 1, 2
 ```
 
+### Returning in Ruby
+
+**Prompt**: What is the difference between printing and returning?
+
 #### Printing and returning are different
+
+The following method returns a value, but doesn't print anything.
+
 ```ruby
 def add_numbers_quietly(first, second)
   first + second
@@ -209,10 +190,6 @@ end
 
 implicitly_return_5
 ```
-
-* What was the value of the if statement?
-* `status_of_world = if 1 == 2 then "messed up" else "a-o-k" end`
-* `result = 1 == 2 ? "wuh oh" : "phew"`
 
 
 #### Parameters can have default values
@@ -242,7 +219,9 @@ recurse(5)
 recurse 5
 ```
 
-## The biggest difference from javascript
+## Method scope: the biggest difference from javascript
+
+**Prompt:** Write some Ruby that demonstrates the scoping of variables.
 
 #### Functions have locally scoped variables
 The following code wont work. Why?
@@ -300,6 +279,5 @@ Please complete [these exercises](exercises.md).
 ### Further Reading
 
 * [Tutorialspoint Ruby Quick Guide](http://www.tutorialspoint.com/ruby/ruby_quick_guide.htm)
-* [Ruby Hash in Detail] (http://ruby-doc.org/core-2.2.0/Hash.html)
-* [RubyMonk Library](https://rubymonk.com/learning/books/1-ruby-primer)
-* [Online IRB Environment] (http://joshnuss.github.io/mruby-web-irb/)
+* [Ruby Hash in Detail](http://ruby-doc.org/core-2.2.0/Hash.html)
+* [Online IRB Environment](http://joshnuss.github.io/mruby-web-irb/)
