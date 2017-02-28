@@ -22,40 +22,16 @@ In order to write Ruby code, you're going to need some practice writing Ruby met
 - Explain the two main differences between Ruby methods and JavaScript functions: isolated scope and implicit return.
 
 ## Quick review
-<details>
-  <summary>What are the primitive data types in JavaScript? Contrast them with the primitive types in Ruby.</summary>
-    <h4>Javascript</h4>
-    <ul>
-      <li> `null`, `undefined`</li>
-      <li> Strings</li>
-      <li> Booleans</li>
-      <li> Number :  `.toString()`</li>
-      <li> Arrays : `[index]` to access elements, `indexOf()`,`splice()`, `slice()`, `length` </li>
-      <li> Objects: `["some_key"]`, `.some_key` </li>
-    </ul>
+Make a table with 2 columns. Label one column Ruby and the other column JavaScript. Add at least 3 pieces of JavaScript syntax and the analogous Ruby syntax we've learned.
 
-   <h4>Ruby</h4>
-   <ul>
-    <li> `nil` </li>
-    <li> Integers: Fixnum, Bignum, `to_s` </li>
-    <li> Floats
-    <li> Strings: `.to_i` and `.to_f` `*INTEGER`</li>
-    <li> Symbols </li>
-    <li> Booleans </li>
-    <li> Arrays / Ranges : `[x..y]`, `[x...y]`, `index` </li>
-    <li> Hashes </li>
-      <ul>
-        <li> `{ :key => value }`</li>
-        <li> `{ key: value }` which is the same as `{:key =>value }`</li>
-        <li> `[some_key]` and `[some_key]=`</li>
-        <li> `key`,`.keys`, `.each`</li>
-      </ul>
-    </ul>
-
-</details>
+| Ruby | JavaScript     |
+| :------------- | :------------- |
+| `p`, `puts`, `print`       | `console.log()`     |
 
 <details>
   <summary>Identify the operators in Javascript and Ruby and find the contrasts.</summary>
+
+
   <h4>JavaScript operators</h4>
   <ul>
     <li>`=`, `+=`, `*=`, ...</li>

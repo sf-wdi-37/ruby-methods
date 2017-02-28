@@ -2,7 +2,7 @@
 
 Put your solutions in a file called `ruby_methods.rb`. To run, type `ruby ruby_methods.rb` in the command line.
 
-When you've built a working solution, add it to the [Google Doc](https://docs.google.com/document/d/1KwmIuoZMirBW9Ko3n086SflN8IXcBkSKUphk5I3D9Dg/edit?usp=sharing)!
+When you've built a working solution, add it to the [Google Doc](https://docs.google.com/document/d/1R1ML7bezFZHO2mTh8K4zV_T122pLoE4aQoxgES5MPLc/edit?usp=sharing)!
 
 Later in class, I'll share solutions with you.
 
