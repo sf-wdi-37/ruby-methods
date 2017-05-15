@@ -2,9 +2,11 @@
 
 Put your solutions in a file called `ruby_methods.rb`. To run, type `ruby ruby_methods.rb` in the command line.
 
-When you've built a working solution, add it to the [Google Doc](https://docs.google.com/document/d/1R1ML7bezFZHO2mTh8K4zV_T122pLoE4aQoxgES5MPLc/edit?usp=sharing)!
+<!-- When you've built a working solution, add it to the [Google Doc](https://docs.google.com/document/d/1R1ML7bezFZHO2mTh8K4zV_T122pLoE4aQoxgES5MPLc/edit?usp=sharing)!
 
-Later in class, I'll share solutions with you.
+Later in class, I'll share solutions with you. -->
+
+Please don't reference solutions yet. 
 
 ### Looping
 
@@ -69,7 +71,7 @@ partial_sums([5,6,7])
 ```
 
 #### Using `Array#map`
-[Docs for Array#map] (http://ruby-doc.org/core-2.2.0/Array.html#method-i-map)
+[Docs for Array#map](http://ruby-doc.org/core-2.2.0/Array.html#method-i-map)
 
 Write a method for each exercise below that uses `Array#map`:
 
