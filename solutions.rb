@@ -7,7 +7,7 @@ def p_times(statement,num)
   end
 end
 
-# A spiffy way to do it
+# A more ruby-esque way to do it
 def p_times2(statement,num)
   num.times do
     puts statement
@@ -43,6 +43,13 @@ def letter_count2(str)
   ans
 end
 
+def letter_count3(str)
+  str.each_char.inject (Hash.new) do |memo, ch|
+    memo[ch] ? memo[ch] += 1 : memo[ch] = 1
+    memo
+  end
+end
+
 # puts letter_count 'hello'
 
 # Exercise 3
@@ -62,12 +69,12 @@ end
 
 # Exercise 4
 def print_contacts(contacts)
-  contacts.each do |k,v|
-    puts k, v
+  contacts.each do |name, phone|
+    puts name, phone
   end
 end
 
-contacts_hash = {'juliana' => '555-555-5555', 'brianna' => '666-666-6666', 'jenny' => "867-5309"}
+contacts_hash = {'juliana' => '555-555-5555', 'anne' => '666-666-6666', 'jenny' => "867-5309"}
 # print_contacts contacts_hash
 
 # Exercise 5
@@ -96,7 +103,9 @@ end
 
 # puts get_contacts contacts_hash
 
-## List exercises
+
+
+## Enumerable Inject/Reduce Exercises
 # Enumerable Inject 1
 def get_sum(arr)
   arr.inject do |memo, x|
@@ -153,6 +162,8 @@ end
 
 # p partial_sums [1,2,3]
 
+
+
 # Array Map 1
 def multiply_by(num,arr)
   arr.map do |x|
@@ -180,6 +191,7 @@ def get_responses(arr)
 end
 
 # p get_responses ['what?','why?','how?']
+
 
 ## Method Exercises
 def factorial(n)
