@@ -1,6 +1,7 @@
 <!--
-Creator: Team, editing by Cory
-Market: SF
+Creator: Team
+Edited by: Cory, Michelle, Brianna
+Location: SF
 -->
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
@@ -11,25 +12,26 @@ Market: SF
 <!-- framing the "why" in big-picture/real world examples -->
 *This workshop is important because:*
 
-In order to write Ruby code, you're going to need some practice writing Ruby methods. Once you can divide your Ruby code into methods, you'll have greater mastery over your project.
+In order to write Ruby code, you're going to need some practice writing Ruby methods. Once you can divide your Ruby code into methods, you'll have cleaner, more readable code. Learning to design Ruby methods and predict their output is necessary to develop more complex projects (like web sites!).
 
 ### What are the objectives?
 <!-- specific/measurable goal for students to achieve -->
 *After this workshop, developers will be able to:*
 
 - Write conditionals, loops, and methods in Ruby
-- Apply methods in ruby to solve problems
-- Explain the two main differences between Ruby methods and JavaScript functions: isolated scope and implicit return.
+- Apply methods in Ruby to solve problems
+- Explain the two main differences between Ruby methods and JavaScript functions: isolated local scope and implicit return.
 
 ## Quick review
-Make a table with 2 columns. Label one column Ruby and the other column JavaScript. Add at least 3 pieces of JavaScript syntax and the analogous Ruby syntax we've learned.
+
+1. Make a table with 2 columns. Label one column Ruby and the other column JavaScript. Add at least 3 pieces of JavaScript syntax and the analogous Ruby syntax we've learned.
 
 | Ruby | JavaScript     |
 | :------------- | :------------- |
 | `p`, `puts`, `print`       | `console.log()`     |
 
-<details>
-  <summary>Identify the operators in Javascript and Ruby and find the contrasts.</summary>
+
+2. Identify the operators in Javascript and Ruby, and find differences.
 
 
   <h4>JavaScript operators</h4>
@@ -46,24 +48,24 @@ Make a table with 2 columns. Label one column Ruby and the other column JavaScri
     <li>`!`, `not`, `||`, `&&`</li>
     <li>`** `, `+`, `-`, `/`, `*`</li>
   </ul>
-</details>
 
 ### Control flow
 
 #### ([Ruby Control Flow Structures](http://en.wikibooks.org/wiki/Ruby_Programming/Syntax/Control_Structures))
 
-Create a demo of two conditionals and one loop/iterator:
+Create a demo with one conditional and one loop/iterator:
 
 * Conditionals
     * `if`, `elsif`, `else`, `unless`, `case when else` ...
 * Loops/iterators
-    * `until`, `while`, `times` ...
-    * `.each`, `for ... in`
+    * `until`, `while`, `.times` ...
+    * `.each`, `for ... in ... `
 
 #### Blocks
 
-   * block - chunks of code between braces or between do..end:
-     * used with `.each`, `.map`
+   * block - chunks of code between braces or between `do`...`end`:
+   
+     * used with `.each`, `.map`, and many other methods that let us specify some code to run
 
     ```ruby
     [1, 2, 3].each do |n|
@@ -78,13 +80,15 @@ Create a demo of two conditionals and one loop/iterator:
 
 [Further Reading on Blocks](http://mixandgo.com/blog/mastering-ruby-blocks-in-less-than-5-minutes)
 
+You can think of blocks a *little bit* like callbacks from JavaScript.
+
 ## Ruby Methods
 
 ### The basics
 
-  * use `def` when defining a method.
-  * Methods implicitly returns last evaluation.
-  * Ruby is locally scoped.
+  * Use `def`, method name, and `end` when defining a method.
+  * Methods implicitly return whatever they last evaluated.
+  * Ruby local variables are completely isolated to the exact method they're inside of.
 
 #### Defining a method
 
@@ -163,6 +167,24 @@ end
 
 add_numbers(1,2)
 add_numbers 1, 2
+```
+
+#### Define a method that uses a block
+```ruby
+def process_number(n=3)
+  p 'processing your number'
+  yield(n)
+  p 'all done!'
+end
+
+process_number 5 do |i|
+  p (0..i).to_a
+end
+
+
+process_number do |k|
+  p k * 2 
+end
 ```
 
 ### Returning in Ruby
@@ -246,6 +268,18 @@ puts do_stuff2(foo)
 ```
 
 [Ruby Method Calls In Depth](https://en.wikibooks.org/wiki/Ruby_Programming/Syntax/Method_Calls)
+
+You can use the `defined?` method to check the scope of a variable.
+
+```ruby
+x = 4
+=> 4
+defined? x
+=> "local-variable"
+
+defined? y
+=> nil
+```
 
 ### Exercises
 Please complete [these exercises](exercises.md).
