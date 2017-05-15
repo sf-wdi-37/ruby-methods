@@ -35,15 +35,23 @@ In order to write Ruby code, you're going to need some practice writing Ruby met
 
 
   <h4>JavaScript operators</h4>
+  
   * `=`, `+=`, `*=`, ...   
+  
   * `==`, `===`, `>`, `>=`, ...  
+  
   * `!`, `||`, `&&`  
+  
   * `+`, `-`, `/`, `*`  
 
   <h4>Ruby operators</h4>
+  
   * `=`, `+=`, `*=`, ...  
+  
   * `==`, `.equal?`, `>`, `>=`, ...  
+  
   * `!`, `not`, `||`, `&&`   
+  
   * `** `, `+`, `-`, `/`, `*`   
  
 
